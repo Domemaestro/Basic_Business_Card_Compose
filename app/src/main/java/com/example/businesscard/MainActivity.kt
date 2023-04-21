@@ -81,7 +81,7 @@ fun BusinessCard(){
                 color = Color.White,
             )
             Text(
-                text = "Junior Android Developer"
+                text = "Beginner Android Developer"
                     , color = backcolor,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(start = 16.dp,end = 16.dp)
