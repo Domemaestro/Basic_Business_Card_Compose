@@ -87,39 +87,43 @@ fun BusinessCard(){
                 modifier = Modifier.padding(start = 16.dp,end = 16.dp)
             )
 
+        }
+        Column(modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(
+                horizontalAlignment = Alignment.Start,
 
-        }
-        Column(
-            modifier = Modifier.fillMaxWidth()
-            ) {
-            //Section2
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                Icon(imageVector = Icons.Filled.Call, contentDescription = null,
-                modifier = Modifier.padding(12.dp), Color(0xFF3DDC84)
-                )
-                Text(text = "+00 (00) 000 000",
-                    modifier = Modifier.padding(12.dp),
-                    color = Color.White
-                )
-            }
-            Row( modifier = Modifier.padding(start = 100.dp), horizontalArrangement = Arrangement.Center) {
-                Icon(imageVector = Icons.Filled.Share,
-                    contentDescription = null,
-                modifier = Modifier.padding(12.dp),Color(0xFF3DDC84))
-                Text(text = "@Dome",
-                    modifier = Modifier.padding(12.dp),
-                    color = Color.White
+                ) {
+                //Section2
+                Row( horizontalArrangement = Arrangement.Center) {
+                    Icon(imageVector = Icons.Filled.Call, contentDescription = null,
+                        modifier = Modifier.padding(12.dp), Color(0xFF3DDC84)
                     )
-            }
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                Icon(imageVector = Icons.Filled.Email,
-                    contentDescription = null,
-                modifier = Modifier.padding(12.dp),Color(0xFF3DDC84))
-                Text(text = "xome@gmail.com",
-                modifier = Modifier.padding(12.dp),
-                    color = Color.White)
+                    Text(text = "+00 (00) 000 000",
+                        modifier = Modifier.padding(12.dp),
+                        color = Color.White
+                    )
+                }
+                Row( horizontalArrangement = Arrangement.Center) {
+                    Icon(imageVector = Icons.Filled.Share,
+                        contentDescription = null,
+                        modifier = Modifier.padding(12.dp),Color(0xFF3DDC84))
+                    Text(text = "@Dome",
+                        modifier = Modifier.padding(12.dp),
+                        color = Color.White
+                    )
+                }
+                Row(horizontalArrangement = Arrangement.Center) {
+                    Icon(imageVector = Icons.Filled.Email,
+                        contentDescription = null,
+                        modifier = Modifier.padding(12.dp),Color(0xFF3DDC84))
+                    Text(text = "xome@gmail.com",
+                        modifier = Modifier.padding(12.dp),
+                        color = Color.White)
+                }
             }
         }
+
     }
 }
 
