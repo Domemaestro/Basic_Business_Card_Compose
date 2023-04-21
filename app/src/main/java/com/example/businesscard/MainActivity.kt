@@ -26,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 
 import androidx.compose.ui.text.font.FontWeight
@@ -33,6 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.businesscard.ui.theme.BusinessCardTheme
+import com.example.businesscard.ui.theme.backcolor
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 class MainActivity : ComponentActivity() {
@@ -73,14 +75,14 @@ fun BusinessCard(){
                 .height(100.dp))
 
             Text(
-                text = "Full Name",
+                text = "Durgesh Pawar",
                 fontSize = 30.sp,
                 modifier = Modifier.padding(start = 16.dp,end = 16.dp),
                 color = Color.White,
             )
             Text(
-                text = "Title"
-                    , color = Color.White,
+                text = "Junior Android Developer"
+                    , color = backcolor,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(start = 16.dp,end = 16.dp)
             )
@@ -88,31 +90,34 @@ fun BusinessCard(){
 
         }
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
             ) {
             //Section2
-            Row() {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
                 Icon(imageVector = Icons.Filled.Call, contentDescription = null,
-                modifier = Modifier.padding(12.dp))
-                Text(text = "Text",
-                    modifier = Modifier.padding(12.dp)
+                modifier = Modifier.padding(12.dp), Color(0xFF3DDC84)
+                )
+                Text(text = "+00 (00) 000 000",
+                    modifier = Modifier.padding(12.dp),
+                    color = Color.White
                 )
             }
-            Row() {
+            Row( modifier = Modifier.padding(start = 100.dp), horizontalArrangement = Arrangement.Center) {
                 Icon(imageVector = Icons.Filled.Share,
                     contentDescription = null,
-                modifier = Modifier.padding(12.dp))
-                Text(text = "Text2",
-                    modifier = Modifier.padding(12.dp)
+                modifier = Modifier.padding(12.dp),Color(0xFF3DDC84))
+                Text(text = "@Dome",
+                    modifier = Modifier.padding(12.dp),
+                    color = Color.White
                     )
             }
-            Row() {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
                 Icon(imageVector = Icons.Filled.Email,
                     contentDescription = null,
-                modifier = Modifier.padding(12.dp))
-                Text(text = "text3",
-                modifier = Modifier.padding(12.dp))
+                modifier = Modifier.padding(12.dp),Color(0xFF3DDC84))
+                Text(text = "xome@gmail.com",
+                modifier = Modifier.padding(12.dp),
+                    color = Color.White)
             }
         }
     }
